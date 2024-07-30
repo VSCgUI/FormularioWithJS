@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-familly-text: 'Inter', sans-serif;
+    --font-header: 'Sora', sans-serif;
+
+    --title-color: #111827;
+
+    --color-primary-button: #CA3884;
+
+    --item-list-color: #374151;
+
+
+    --color-alert: #C93847;
+}
+
+body {
+    padding: 32px;
+    font-family: var(--font-familly-text);
+    display: grid;
+    place-content: center;
+  
+    background-color: #F4F5FB;
+}
+
+header{
+   opacity: 0; 
+}
+
+#inicial a {
+    color: var(--color-primary-button);
+
+    text-decoration: none;
+    font-family: var(--font-familly-text);
+
+    font-size: 14px;
+}
+
+
+#inicial h1 {
+    font-size: 24px;
+    color: var(--title-color);
+
+    margin: 16px 0 44px ;
+}
+
+#addList {
+    display: contents;
+}
+
+#addList input{
+    width: 326px;
+    height: 44px;
+
+    border-radius: 12px;
+    border-color: #D1D5DB;
+    margin-bottom: 16px;
+}
+
+#addList input::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding-left: 18px;
+
+    color: #9CA3AF;
+}
+
+#addList button{
+    width: 326px;
+    height: 44px;
+
+    border-radius: 12px;
+    background: var(--color-primary-button);
+    border: none;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: white;
+    transition: .5s;
+
+    margin-bottom: 40px;
+}
+
+#addList button:hover{
+    background: hsl(329, 69%, 48%);
+    cursor: pointer;
+}
+
+.item {
+    display: flex;
+
+    width: 327px;
+    height: 57px;
+    padding: 12px;
+
+    background: white;
+    border-radius: 12px;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin-bottom: 8px ;
+
+}
+
+.item p {
+    width: 231px;
+    font-size: 16px;
+    font-weight: semi-bold;
+
+    color: var(--item-list-color);
+}
+
+.item img:hover{
+    cursor: pointer;
+}
+
+#alert{
+    background: var(--color-alert);
+
+    display: flex;
+
+    padding: 12px;
+    gap: 8px;
+
+    width: 327px;
+    border-radius: 12px;
+    font-size: 16px;
+
+    color: white;
+
+    margin-top: 32px;
+
+}
+
+#alert p {
+    width: 247px;
+}
+
+#close:hover{
+    cursor: pointer;
+}
+
+.hiden{
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
+}
+
+/*Responsividade para a forma desktop*/
+
+@media(min-width: 780px){
+    header{
+        opacity: 1;
+        margin-bottom: 62px;
+        display: flex;
+
+        gap: 2px;
+        place-content: center;
+    }
+
+   
+
+    #addList{
+        display: flex;
+        gap: 16px;
+    }
+
+    #addList input{
+        width: 451px;
+    }
+
+    #addList button{
+        width: 160px;    
+    }
+
+    .item {    
+        width: 627px;
+    }
+
+    .item p{
+        width: 531px;
+    }
+
+    #alert{
+        width: 627px;
+    }
+
+    #alert p{
+        width: 547px;
+    }
+
+
+}
+
+
+
